@@ -1,7 +1,7 @@
 Summary: Simple DirectMedia Layer - Sample Image Loading Library
 Name: SDL2_image
-Version: 2.0.0
-Release: 6
+Version: 2.0.4
+Release: 1
 Source: http://www.libsdl.org/projects/%{name}/release/%{name}-%{version}.tar.gz
 URL: http://www.libsdl.org/projects/SDL_image/
 License: zlib
@@ -25,7 +25,7 @@ This is a simple library to load images of various formats as SDL surfaces.
 This library supports BMP, PPM, PCX, GIF, JPEG, PNG, and TIFF formats.
 
 %prep
-%setup -q
+%setup -q -n %{name}-%{version}/%{name}
 
 %build
 ./autogen.sh
