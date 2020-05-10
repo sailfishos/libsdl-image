@@ -1,11 +1,10 @@
 Summary: Simple DirectMedia Layer - Sample Image Loading Library
 Name: SDL2_image
-Version: 2.0.4
+Version: 2.0.5
 Release: 1
 Source: http://www.libsdl.org/projects/%{name}/release/%{name}-%{version}.tar.gz
 URL: http://www.libsdl.org/projects/SDL_image/
 License: zlib
-Group: Applications/Multimedia
 BuildRequires: pkgconfig(sdl2)
 BuildRequires: libjpeg-turbo-devel
 BuildRequires: pkgconfig(libpng)
@@ -17,7 +16,6 @@ This library supports BMP, PPM, PCX, GIF, JPEG, PNG, and TIFF formats.
 
 %package devel
 Summary: Simple DirectMedia Layer - Sample Image Loading Library (Development)
-Group: Development/Libraries
 Requires: %{name}
 
 %description devel
@@ -52,4 +50,3 @@ make
 %{_libdir}/lib*.so
 %{_includedir}/*/*.h
 %{_libdir}/pkgconfig/*
-
