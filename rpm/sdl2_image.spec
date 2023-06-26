@@ -1,6 +1,6 @@
 Summary: Simple DirectMedia Layer - Sample Image Loading Library
 Name: SDL2_image
-Version: 2.6.2
+Version: 2.6.3
 Release: 1
 Source: %{name}-%{version}.tar.gz
 URL: https://github.com/libsdl-org/SDL_image
