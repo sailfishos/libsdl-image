@@ -1,6 +1,8 @@
+%undefine __cmake_in_source_build
+
 Summary: Simple DirectMedia Layer - Sample Image Loading Library
 Name: SDL2_image
-Version: 2.6.3
+Version: 2.8.2
 Release: 1
 Source: %{name}-%{version}.tar.gz
 URL: https://github.com/libsdl-org/SDL_image
@@ -27,23 +29,16 @@ This library supports BMP, PPM, PCX, GIF, JPEG, PNG, and TIFF formats.
 %autosetup -p1 -n %{name}-%{version}/%{name}
 
 %build
-mkdir -p build
-pushd build
-%cmake ..
-%make_build
-popd
+%cmake
+%cmake_build
 
 %install
-pushd build
-%make_install
+%cmake_install
 rm -f %{buildroot}%{_datadir}/licenses/%{name}/LICENSE.txt
-popd
 
-%post
-/sbin/ldconfig
+%post -p /sbin/ldconfig
 
-%postun
-/sbin/ldconfig
+%postun -p /sbin/ldconfig
 
 %files
 %defattr(-,root,root)
